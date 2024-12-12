@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CrownAgroVetltd</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-body">
+
+    <!-- home section -->
+    <section class="bg-gray-200 ">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <nav class="flex-wrap  lg:flex items-center py-4 lg:py-10 xl:relative z-10" x-data="{navbarOpen:false}">
+
+                <div class="flex items-center justify-between mb-10 lg:mb-0">
+                    <a href="./index.html">
+                        <img src="assets/image/IMG_5187.jpg" alt="Logo img" class="w-32 rounded-xl">
+                    </a>
+                    <button class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-green-700 border border-green-700 rounded-md" @click="navbarOpen = !navbarOpen">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+
+                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./about.html">About</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./service.html">Service</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#faq">FAQ</a>
+                    </li>
+
+                </ul>
+
+                <a href="https://wa.me/2348033112824" class="px-5 py-3 lg:block border-2 border-green-700 rounded-lg font-semibold text-green-700 text-lg hover:bg-green-700 hover:text-white transition ease-linear duration-500" :class="{'hidden':!navbarOpen,'flex':navbarOpen}" style="border-color: #128620">
+                    +2348033112824
+                </a>
+
+            </nav>
+        </div>
+    </section>
+    <!-- home section //nd -->
+
+    <!-- Hero section -->
+    <section class="relative">
+        <div class="relative w-full h-96 overflow-hidden">
+            <img src="./__MACOSX/assets/image/about-hero.webp" alt="About Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+
+             <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-4">
+                <h1 class="text-5xl font-bold">ABOUT US</h1>
+                <p class="text-xl">Your Trusted and reliable Agrovet, Consultancy, Fumigation, Industrial cleaning and Clinical service provider company</p>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section //ends -->
+
+    <!-- History section -->
+    <section class="mx-auto max-w-screen-lg">
+        <div class="p-10">
+            <h1 class="text-gray-900 text-5xl font-semibold mb-10" style="color: #128620;"> OUR HISTORY </h1>
+            <div class="text-gray-500">
+                <p class="mb-10">
+                    Crown Agro-Vet Limited, a leading pest control and management facility,
+                    registered and licensed with the Corporate Affairs Commission with a
+                    mandate of ensuring the safety of our environment, prevention of pest induced diseases on humans, 
+                    3 animals, and livestock, and eradication of
+                    economic losses orchestrated by the destruction of our infrastructures by
+                    pests and rodents. We provide these services to an array of our clients
+                    using Integrated Pest Management Strategies that combine the utilization
+                    of biological, physical, and chemical pest control methods to prevent the
+                    spread of pests and reduce reliance on harmful pesticides. IPM helps
+                    control pests while minimizing environmental impact and reducing the
+                    development of resistance to pesticides. We utilize eco-friendly
+                    methodologies in fumigating homes, offices, schools, and infrastructural
+                    facilities, these include the use of natural predators to tackle specific
+                    insects, botanical pesticides, and Integrated Pest Management practices to
+                    meet the needs of our clients. We utilize a multi-dimensional approach to
+                    carrying out our fumigation process amongst which are:
+                </p>
+                <ul>
+                    <li class="mb-6"> 
+                        <span style="color: #128620;" class="font-semibold text-xl">Inspection:</span> 
+                        We examine vulnerability areas, pest entry points, and pest
+                        population levels at our client site, determining specific types of pests and
+                        developing an approach to tackling them.
+                    </li>
+
+                    <li class="mb-6">
+                        <span style="color: #128620;" class="font-semibold text-xl">Preparation:</span> We seal up every entry point for insects and pests and
+                        remove cover items and sensitive materials to disallow fumigants from
+                        entering them.
+                    </li>
+                        
+                    <li class="mb-6">
+                        <span style="color: #128620;" class="font-semibold text-xl">Fumigation Process: </span>Between 24 and 72 hours, we apply fumigants and
+                        ensure all areas are enclosed to prevent chemical splashes and
+                        contamination of other non-designated areas of the facility.
+                    </li>
+
+                    <li class="mb-6">
+                        <span style="color: #128620;" class="font-semibold text-xl">Aeration and Ventilation: </span>We ensure the facility is aerated and
+                        ventilated to remove fumigants. We ensure all areas are open for several
+                        hours to remove fumigants from the facility.
+                    </li>
+
+                    <li class="mb-6">
+                        <span style="color: #128620;" class="font-semibold text-xl">Post Fumigation Cleaning: </span>We ensure the facility fumigated is cleaned,
+                        debris removed and all exposed areas are washed properly. We reassess
+                        the area and ensure dead pests are removed and damaged components
+                        are fixed.
+                    </li>
+
+                    <li class="">
+                        <span style="color: #128620;" class="font-semibold text-xl">Post-Fumigation Inspection:</span> We ensure that the pest problem has been
+                        addressed. In schools and offices. We provide a report on the success of
+                        the operation.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- History section ends -->
+
+    <!-- About section -->
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+
+            <div class="md:flex  mx-auto max-w-5xl gap-10  mb-10 ">
+                <div class="md:w-1/2 border-2 p-6 rounded-xl border-green-100 mb-6 transform transition duration-300 hover:scale-105 ">
+                    <h1 class="font-semibold text-center text-2xl mb-6">OUR MISSION</h1>
+                    <p class="text-gray-500">
+                        To create safe, healthy, and pest-free environments using sustainable and 
+                        effective pest control methodologies form both human and animal.
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 border-2 p-6 rounded-xl border-green-100 mb-6 transform transition duration-300 hover:scale-105 ">
+                    <h1 class="font-semibold text-2xl text-center mb-6">OUR VISION</h1>
+                    <p class="text-gray-500">
+                        To be the go-to pest control and agricultural solutions provider, 
+                        recognized for our commitment to excellence, environmental sustainability, 
+                        and customer satisfaction.
+                    </p>
+                </div>
+            </div>
+          
+            <div class="rounded-xl " style="background-color: #128620;">
+                <dl
+                class="mg-6 py-5 grid grid-cols-1 gap-4 divide-y divide-gray-300 sm:mt-8 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+              >
+                <div class="flex flex-col px-4 py-8 text-center text-white hover:opacity-60 transform transition duration-300 hover:scale-105">
+                  <dt class="order-last text-lg font-medium ">Years of Experience</dt>
+            
+                  <dd class="text-4xl font-extrabold md:text-5xl" >27+</dd>
+              </div>
+            
+                <div class="flex flex-col px-4 py-8 text-center text-white hover:opacity-60 transform transition duration-300 hover:scale-105">
+                  <dt class="order-last text-lg font-medium ">Customers</dt>
+            
+                  <dd class="text-4xl font-extrabold md:text-5xl" >15+</dd>
+                </div>
+            
+                <div class="flex flex-col px-4 py-8 text-center text-white hover:opacity-60 transform transition duration-300 hover:scale-105">
+                  <dt class="order-last text-lg font-medium ">Consultancy services</dt>
+            
+                  <dd class="text-4xl font-extrabold  md:text-5xl" >50+</dd>
+                </div>
+            
+                <div class="flex flex-col px-4 py-8 text-center text-white hover:opacity-60 transform transition duration-300 hover:scale-105">
+                  <dt class="order-last text-lg font-medium ">Projects</dt>
+            
+                  <dd class="text-4xl font-extrabold md:text-5xl" >20+</dd>
+                </div>
+              </dl>
+            </div>
+        </div>
+    </section>
+    <!-- About section //ends -->
+
+    <!-- Images section -->
+     <section>
+        <div class="flex">
+            <div class="w-1/2">
+                <img src="./__MACOSX/assets/image/cleaning.png" alt="">
+            </div>
+
+            <div class="w-1/2">
+                <img src="./__MACOSX/assets/image/ventilation.png" alt="">
+            </div>
+        </div>
+     </section>
+    <!-- Images section //ends -->
+
+    <!-- Our Staff section -->
+     <section>
+        <div>
+
+        </div>
+     </section>
+    <!-- Our Staff section //ends -->
+
+    
+    <!-- footer -->
+    <footer class="bg-white py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <div class="flex justify-center lg:justify-start mb-5">
+                        <img src="assets/image/IMG_5187.jpg" alt="Logo" class="w-48 rounded-md">
+                    </div>
+                    <h1 class="text-2xl font-semibold " style="color: #128620;" >Crown Agrovet Limited</h1>
+                    <p class="font-light text-gray-400 text-lg mb-10">Quality service delivery is our hallmark, <br> and we are committed to exceeding your <br> expectations. </p>
+
+                    <div class="flex items-center justify-center lg:justify-start space-x-5">
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="facebook" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="twitter" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="linkedin" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="phone-call" style="color: #128620;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Quick Links</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Home</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">About</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Services</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Contacts</a>
+                    
+                </div>
+
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Services</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Consultation</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Fumigation</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Sanitation</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Veterinary</a>
+                    
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Utility</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div> <!-- container.// -->
+
+    </footer>
+    <!-- footer //end -->
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
