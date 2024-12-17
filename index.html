@@ -115,9 +115,7 @@
           </div>
         </section>
         <!-- Hero section //end -->
-    
 
-        
         <!-- feature section -->
         <section class="bg-white py-10 md:py-16">
 
@@ -855,51 +853,55 @@
         <!-- testimoni section //end -->
 
         <!-- book section -->
-        <section class="bg-white py-10 md:py-16" id="contact">
+        <section class=" py-10 md:py-16" id="contact">
 
-            <div class="container max-w-screen-xl mx-auto px-4 xl:relative">
-
-                <div class=" flex flex-col lg:flex-row items-center justify-evenly py-14 rounded-3xl" style="background-color: #128620;">
-
-                    <div class="text-center lg:text-left mb-10 lg:mb-0">
-                        <h1 class="font-semibold text-white text-4xl md:text-5xl lg:text-7xl leading-normal mb-4">Get a free <br> Consultation</h1>
-                        <p class="font-normal text-white  text-md md:text-xl">We’re Here to Help – Reach Out to Us</p>
-
-                        <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
-                            <i data-feather="phone"></i> 
-                            <p>
-                                <p>08033112824</p> 
-                            </p>
-                        </div>
-
-                        <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
-                            <i data-feather="mail"></i> 
-                            <p>
-                                <p>info@crownagrovet.com</p>
-                            </p>
-                        </div>
-
-                        <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
-                            <i data-feather="home"></i> 
-                            <p>
-                                <p>Monday to Friday: 9:00 AM - 5:00 PM</p> 
-                            </p>
-                        </div>
-
-                        <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
-                            <i data-feather="home"></i> 
-                            <p>
-                                <p>Weekend: Saturday: 9:00 AM - 2:00 PM</p> 
-                            </p>
-                        </div>
-                       
-                    </div>
-
-                    <div class="hidden xl:block xl:absolute right-0">
-                        <img src="assets/image/book.png" alt="Image">
-                    </div>
-
-                    <div class="hidden md:block bg-white xl:relative px-6 py-3 rounded-3xl">
+          <div class="container max-w-screen-xl mx-auto px-4 xl:relative">
+              <div class=" flex flex-col lg:flex-row items-center justify-evenly py-14 rounded-3xl" style="background-color: #128620;">
+  
+                  <div class="text-center lg:text-left mb-10 lg:mb-0">
+      
+                      <h1 class="font-semibold text-white text-4xl md:text-5xl lg:text-7xl leading-normal mb-4">Get a free <br> Consultation</h1>
+                      <p class="font-normal text-white  text-md md:text-xl">We’re Here to Help – Reach Out to Us</p>
+  
+                      <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
+                          <i data-feather="phone"></i> 
+                          <p>
+                              <p>08033112824</p> 
+                          </p>
+                      </div>
+  
+                      <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
+                          <i data-feather="mail"></i> 
+                          <p>
+                              <p>info@crownagrovet.com</p>
+                          </p>
+                      </div>
+  
+                      <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
+                          <i data-feather="home"></i> 
+                          <p>
+                              <p>Monday to Friday: 9:00 AM - 5:00 PM</p> 
+                          </p>
+                      </div>
+  
+                      <div class="flex gap-4 font-normal text-white text-sm md:text-xl  mt-6">
+                          <i data-feather="home"></i> 
+                          <p>
+                              <p>Weekend: Saturday: 9:00 AM - 2:00 PM</p> 
+                          </p>
+                      </div>
+                     
+                  </div>
+  
+                  <div class="hidden xl:block xl:absolute right-0">
+                      <img src="assets/image/book.png" alt="Image">
+                  </div>
+  
+                  <div>
+                      <div id="successMessage" class="hidden py-3 text-center text-white bg-green-600 rounded-xl w-full mb-6">
+                          Message sent successfully!
+                      </div>
+                  <div class="hidde md:block bg-white xl:relative px-6 py-3 rounded-3xl">
                       <div class="py-3">
                           <h3 class="font-semibold text-gray-900 text-center text-3xl" style="color: #128620;">Contact Form</h3>
                       </div>
@@ -934,10 +936,11 @@
                           </button>
                       </div>
                   </div>
-
-            </div> 
-            <!-- container.// -->
-
+                  </div>
+  
+              </div>
+          </div> <!-- container.// -->
+  
         </section>
         <!-- book section //end -->
 
@@ -1147,39 +1150,50 @@
         </script>
 
         <script>
-          document.getElementById("submitButton").addEventListener("click", async () => {
+          function showSuccessMessage() {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.remove('hidden');
+
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        }
+        document.getElementById("submitButton").addEventListener("click", async () => {
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const date = document.getElementById("date").value;
             const meetingType = document.getElementById("meetingType").value;
 
             if (!name || !email || !date || !meetingType) {
-              alert("Please fill in all fields.");
-              return;
+            alert("Please fill in all fields.");
+            return;
             }
 
             try {
-              const response = await fetch("http://localhost:5000/send-email", {
+            const response = await fetch("http://localhost:5000/send-email", {
                 method: "POST",
                 headers: {
-                  "Content-Type": "application/json",
+                "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ name, email, date, meetingType }),
-              });
+            });
 
-              if (response.ok) {
-                alert("Your message has been sent successfully!");
-                document.getElementById("contactForm").reset(); 
-              } else {
+            if (response.ok) {
+                showSuccessMessage();
+                
+                document.getElementById("name").value = '';
+                document.getElementById("email").value = '';
+                document.getElementById("date").value = '';
+                document.getElementById("meetingType").value = '';
+            } else {
                 alert("Failed to send message. Please try again.");
-              }
-            } catch (error) {
-              console.error("Error:", error);
-              alert("An error occurred. Please try again.");
             }
-          });
-        </script>
-
+            } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+            }
+        });
+      </script>
 
     </body>
 </html>

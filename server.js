@@ -33,15 +33,26 @@ app.post("/send-email", async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "", 
+    to: "marrizzsalau7@gmail.com", 
     subject: "New Consultation Request",
     text: `
-      Hello, Crown Agrovet LTD, I would love to book my consultation with you. 
-      provided are my details, Kindly let me know if this time and date is okay by the Organization.
+      Dear Crown Agrovet LTD,
+
+      I hope this message finds you well. I am reaching out to schedule a consultation with your esteemed organization. 
+      Below are my details for your reference:
+
       Name: ${name}
       Email: ${email}
       Preferred Date: ${date}
       Meeting Type: ${meetingType}
+
+      Kindly let me know if the provided date and time work for your schedule, 
+      or if there is an alternative that you would recommend. I look forward to your confirmation.
+
+      Thank you for your time and assistance.
+
+      Best regards,  
+      ${name}
     `,
   };
 
