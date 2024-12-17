@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+     <!-- Tailwind css -->
+     <link rel="stylesheet" href="assets/css/tailwind.css">
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-body">
+
+     <!-- home section -->
+     <section class="bg-gray-200 ">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <nav class="flex-wrap  lg:flex items-center py-4 lg:py-10 xl:relative z-10" x-data="{navbarOpen:false}">
+
+                <div class="flex items-center justify-between mb-10 lg:mb-0">
+                    <a href="./index.html">
+                        <img src="assets/image/IMG_5187.jpg" alt="Logo img" class="w-32 rounded-xl">
+                    </a>
+                    <button class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-green-700 border border-green-700 rounded-md" @click="navbarOpen = !navbarOpen">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+
+                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./about.html">About</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./service.html">Service</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+
+                    <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./faq.html">FAQ</a>
+                    </li>
+
+                </ul>
+
+                <a href="https://wa.me/2348033112824" class="px-5 py-3 lg:block border-2 border-green-700 rounded-lg font-semibold text-green-700 text-lg hover:bg-green-700 hover:text-white transition ease-linear duration-500" :class="{'hidden':!navbarOpen,'flex':navbarOpen}" style="border-color: #128620">
+                    +2348033112824
+                </a>
+
+            </nav>
+        </div>
+    </section>
+    <!-- home section //nd -->
+
+    <!-- Hero image -->
+     <!-- <section>
+        <div>
+            <img src="./__MACOSX/assets/image/frequently-asked-questions.avif" alt="">
+        </div>
+     </section> -->
+    <!-- Hero image //ends -->
+
+      <!-- FAQ section  -->
+    <section class=" mb-20 " style="background-color: #128620;" id="faq" >
+        <div class=" mx-auto container px-4 py-8 flex flex-col lg:flex-row gap-8 items-center">
+            <div class="w-full lg:w-1/2">
+                <img src="./__MACOSX/assets/image/faq.webp" alt="FAQ Image" class="w-full rounded-lg">
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <div class="text-center mb-10 mt-10 text-4xl font-semibold text-white">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+                <div class="space-y-4">
+                    <!-- Question 1 -->
+                    <details
+                    class="rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                    open
+                    >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            What is fumigation, and why is it necessary?
+                        </h2>
+                
+                        <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        > 
+                            <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                            />
+                        </svg>
+                        </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        Fumigation is a pest control process that involves using chemicals (fumigants) 
+                        to eliminate pests such as insects, rodents, and termites. 
+                        It is essential for protecting your health, infrastructure, and agricultural 
+                        produce from damage and diseases caused by pests
+                    </p>
+                    </details>
+                
+                    <!-- Question 2 -->
+                    <details
+                    class="rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                    >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            How often should fumigation be carried out?
+                        </h2>
+                
+                        <span class="shrink-0 rounded-full  p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                            />
+                        </svg>
+                        </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        The frequency depends on the type of facility and the pest infestation 
+                        level. For homes, quarterly fumigation is recommended, while commercial 
+                        spaces may require monthly or bi-monthly treatments.
+                    </p>
+                    </details>
+
+                    <!-- Question 3 -->
+                    <details
+                    class="rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                    >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            What types of pests do you handle?
+                        </h2>
+                
+                        <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                            />
+                        </svg>
+                        </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        We manage a wide range of pests, including cockroaches, termites, 
+                        ants, mosquitoes, rodents (rats and mice), and other harmful insects 
+                        that threaten health and property.
+                    </p>
+                    </details>
+
+                    <!-- Question 4 -->
+                    <details
+                    class="rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                    <h2 class="text-lg font-medium text-gray-900">
+                            What clinical services do you offer?
+                    </h2>
+                
+                    <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                        />
+                        </svg>
+                    </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        We provide veterinary care, health consultations, and preventive treatments for
+                        both humans and animals to ensure safety and well-being in shared environments.
+                    </p>
+                    </details>
+
+                    <!-- Question 5 -->
+                    <details
+                    class=" rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                    >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            What does your industrial cleaning service include?
+                        </h2>
+                
+                        <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                            />
+                        </svg>
+                        </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        Our industrial cleaning services include deep cleaning, disinfection, 
+                        and waste management for factories, warehouses, and other large facilities to maintain high hygiene standards.
+                    </p>
+                    </details>
+
+                    <!-- Question 6 -->
+                    <details
+                    class="rounded-3xl group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
+                >
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+                    <h2 class="text-lg font-medium text-gray-900">
+                            What types of agricultural equipment do you sell?
+                    </h2>
+                
+                    <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"
+                        />
+                        </svg>
+                    </span>
+                    </summary>
+                
+                    <p class="mt-4 leading-relaxed text-gray-700">
+                        We offer high-quality agricultural equipment, including sprayers, fumigation machines, plows, 
+                        harvesters, and other tools to enhance farming efficiency and productivity.
+                    </p>
+                    </details>
+
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- FAQ section //end  -->
+
+
+     <!-- footer -->
+     <footer class="bg-white py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <div class="flex justify-center lg:justify-start mb-5">
+                        <img src="assets/image/IMG_5187.jpg" alt="Logo" class="w-48 rounded-md">
+                    </div>
+                    <h1 class="text-2xl font-semibold " style="color: #128620;" >Crown Agrovet Limited</h1>
+                    <p class="font-light text-gray-400 text-lg mb-10">Quality service delivery is our hallmark, <br> and we are committed to exceeding your <br> expectations. </p>
+
+                    <div class="flex items-center justify-center lg:justify-start space-x-5">
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="facebook" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="twitter" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="linkedin" style="color: #128620;"></i>
+                        </a>
+
+                        <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="phone-call" style="color: #128620;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Quick Links</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Home</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">About</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Services</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Contacts</a>
+                    
+                </div>
+
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Services</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Consultation</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Fumigation</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Sanitation</a>
+                    
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Veterinary</a>
+                    
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <h4 class="font-semibold  text-2xl mb-6" style="color: #128620;">Utility</h4>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
+
+                    <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div> <!-- container.// -->
+
+    </footer>
+    <!-- footer //end -->
+    
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

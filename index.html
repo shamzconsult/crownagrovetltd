@@ -24,9 +24,9 @@
 
             <div class="container max-w-screen-xl mx-auto px-4">
 
-                <nav class="flex-wrap  lg:flex items-center py-14 xl:relative z-10" x-data="{navbarOpen:false}">
+              <nav class="flex-wrap  lg:flex items-center py-4 lg:py-10 xl:relative z-10" x-data="{navbarOpen:false}">
 
-                    <div class="flex items-center justify-between mb-10 lg:mb-0">
+                    <div class="flex items-center justify-between mb-1 lg:mb-0">
                       <a href="#">
                         <img src="assets/image/IMG_5187.jpg" alt="Logo img" class="w-32 rounded-xl">
                       </a>
@@ -46,11 +46,11 @@
                         </li>
         
                         <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#contact">Contact</a>
+                            <a href="./contact.html">Contact</a>
                         </li>
         
                         <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#faq">FAQ</a>
+                            <a href="./faq.html">FAQ</a>
                         </li>
 
                     </ul>
@@ -91,37 +91,33 @@
         <!-- home section //nd -->
 
         <!-- Hero section -->
-        <section class="bg-gray-200 ">
-          <div class="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
-              <div>
-                <div class="max-w-lg md:max-w-none">
-                  <h1 class="font-semibold text-4xl md:text-4xl lg:text-7xl text-gray-900 leading-normal mb-6">Creating Safer <br> Environments, <br> Protecting Human and <br> Animal Health</h1>
-
+        <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('./__MACOSX/assets/image/CAV3.png')">
+          <!-- Black Overlay -->
+          <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         
-                  <p class="font-normal md:text-sm xl:text-xl text-gray-400 leading-relaxed mb-12"> Sustainable Pest Control and Fumigation Solutions Designed to <br> 
-                    Protect Your Homes, Businesses, Schools, Farms, and Public Spaces with <br> 
-                    Environmental Safety at the Core. In addition, we offer Clinical Services, <br> Industrial Cleaning,
-                    Sales of High-Quality Agricultural and Fumigation <br>  Equipment, and 
-                    Agricultural Consultancy to ensure holistic <br>  environmental and agricultural management solutions.
-                </p>
-                <a href="https://wa.me/2348033112824" class="px-6 py-4 text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition ease-in-out duration-500 mb-20" style="background-color: #128620">Contact Us</a href="https://wa.me/2348033112824">
-
-                </div>
-              </div>
-        
-              <div>
-                <img
-                  src="./__MACOSX/assets/image/CAV3.png"
-                  class="rounded hidden md:block"
-                  alt=""
-                />
-              </div>
+          <!-- Hero Content -->
+          <div class="relative z-10 flex items-center justify-center h-full text-center px-4 lg:text-left lg:px-16">
+            <div class="text-white max-w-6xl">
+              <h1 class="text-3xl md:text-5xl lg:text-5xl xl:text-7xl font-bold leading-tight mb-6  mt-8">
+                Creating Safer <br> Environments, <br> Protecting Human and <br> Animal Health
+              </h1>
+              <p class="text-sm md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-12 ">
+                Sustainable Pest Control and Fumigation Solutions Designed to <br>
+                Protect Your Homes, Businesses, Schools, Farms, and Public Spaces <br>
+                with Environmental Safety at the Core. In addition, we offer Clinical Services, <br>
+                Industrial Cleaning, Sales of High-Quality Agricultural and Fumigation <br> Equipment, 
+                and Agricultural Consultancy to ensure holistic solutions.
+              </p>
+              <a href="https://wa.me/2348033112824" class="px-6 py-4  text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition" style="background-color: #128620;">
+                Contact Us
+              </a>
             </div>
           </div>
         </section>
         <!-- Hero section //end -->
     
+
+        
         <!-- feature section -->
         <section class="bg-white py-10 md:py-16">
 
@@ -904,42 +900,43 @@
                     </div>
 
                     <div class="hidden md:block bg-white xl:relative px-6 py-3 rounded-3xl">
-                        <div class="py-3">
-                            <h3 class="font-semibold text-gray-900 text-center text-3xl" style="color: #128620;">Contact Form</h3>
-                        </div>
+                      <div class="py-3">
+                          <h3 class="font-semibold text-gray-900 text-center text-3xl" style="color: #128620;">Contact Form</h3>
+                      </div>
+  
+                      <div class="py-3">
+                          <input id="name" type="text" placeholder="Full Name" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
+                      </div>
+  
+                      <div class="py-3">
+                          <input id="email" type="text" placeholder="Email" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
+                      </div>
+  
+                      <div class="py-3 relative">
+                          <input id="date" type="text" placeholder="Date" class="px-4 py-4 w-96 bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none">
+  
+                          <div class="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
+                              <i data-feather="calendar"></i>
+                          </div>
+                      </div>
+  
+                      <div class="py-3 relative">
+                          <input id="meetingType" type="text" placeholder="Virtual Meeting" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
+  
+                          <div class="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
+                              <i data-feather="chevron-down"></i>
+                          </div>
+                      </div>
+  
+                      <div class="py-3">
+                          <button id="submitButton" type="button" class="w-full py-4 font-semibold text-lg text-white rounded-xl hover:bg-green-900 transition ease-in-out duration-500" style="background-color: #128620;" >
+                              Booking
+                          </button>
+                      </div>
+                  </div>
 
-                        <div class="py-3">
-                            <input type="text" placeholder="Full Name" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
-                        </div>
-
-                        <div class="py-3">
-                            <input type="text" placeholder="Email" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
-                        </div>
-
-                        <div class="py-3 relative">
-                            <input type="text" placeholder="Date" class="px-4 py-4 w-96 bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none">
-
-                            <div class="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
-                                <i data-feather="calendar"></i>
-                            </div>
-                        </div>
-
-                        <div class="py-3 relative">
-                            <input type="text" placeholder="Virtual Meeting" class="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none">
-
-                            <div class="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
-                                <i data-feather="chevron-down"></i>
-                            </div>
-                        </div>
-
-                        <div class="py-3">
-                            <button class="w-full py-4 font-semibold text-lg text-white rounded-xl hover:bg-green-900 transition ease-in-out duration-500" style="background-color: #128620;" >Booking</button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div> <!-- container.// -->
+            </div> 
+            <!-- container.// -->
 
         </section>
         <!-- book section //end -->
@@ -1148,6 +1145,41 @@
         <script>
             feather.replace()
         </script>
+
+        <script>
+          document.getElementById("submitButton").addEventListener("click", async () => {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const date = document.getElementById("date").value;
+            const meetingType = document.getElementById("meetingType").value;
+
+            if (!name || !email || !date || !meetingType) {
+              alert("Please fill in all fields.");
+              return;
+            }
+
+            try {
+              const response = await fetch("http://localhost:5000/send-email", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ name, email, date, meetingType }),
+              });
+
+              if (response.ok) {
+                alert("Your message has been sent successfully!");
+                document.getElementById("contactForm").reset(); 
+              } else {
+                alert("Failed to send message. Please try again.");
+              }
+            } catch (error) {
+              console.error("Error:", error);
+              alert("An error occurred. Please try again.");
+            }
+          });
+        </script>
+
 
     </body>
 </html>
