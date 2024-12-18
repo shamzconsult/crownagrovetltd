@@ -13,8 +13,24 @@
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" /> -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/index.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <style>
+          .image-item {
+              display: flex;
+              flex-direction: column;
+              width: 30%;
+              margin: 1%;
+          }
+
+          .image-item img {
+            width: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+          }
+        </style>
     </head> 
 
     <body class="font-body">
@@ -525,28 +541,26 @@
                 <h1 class="font-semibold text-gray-900 text-4xl text-center mb-10">Our Gallery</h1>
 
                 <div class="hidden md:block flex items-center text-center space-x-10 lg:space-x-20 mb-12">
-                    <a href="#" class="px-6 py-2 bg-green-800 text-white font-semibold text-xl rounded-lg hover:bg-green-600 transition ease-in-out duration-500">All</a>
-                    <a href="#" class="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500">Fumigation</a>
-                    <a href="#" class="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500">Veterinary</a>
-                    <a href="#" class="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500">Agriculture</a>
+                    <a href="#" class="filter-button px-6 py-2 bg-green-800 text-white font-semibold text-xl rounded-lg hover:bg-green-600 transition ease-in-out duration-500" data-filter="all">All</a>
+                    <a href="#" class="filter-button px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500" data-filter="fumigation">Fumigation</a>
+                    <a href="#" class="filter-button px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500" data-filter="veterinary">Veterinary</a>
+                    <a href="#" class="filter-button px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500" data-filter="agriculture">Agriculture</a>
                 </div>
 
-                <div class="flex space-x-4 md:space-x-6 lg:space-x-8">
-                    <div>
-                        <img src="assets/image/product-jpeg-500x500.webp" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="./__MACOSX/assets/image/consult2.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
-
-                    <div>
-                        <img src="assets/image/fumigation3.webp" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="./__MACOSX/assets/image/cleaning.png" alt="image" class="mb-3 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="./assets/image/animal care 2.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
-
-                    <div>
-                        <img src="./__MACOSX/assets/image/CAV1.png" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="assets/image/fumigation4.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
+                <div class="flex flex-wrap justify-center"> 
+                  <div class="image-item" data-category="agriculture"> 
+                    <img src="assets/image/product-jpeg-500x500.webp" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
+                    <img src="./__MACOSX/assets/image/consult2.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500"> 
+                  </div> 
+                  <div class="image-item" data-category="fumigation"> 
+                    <img src="assets/image/fumigation3.webp" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
+                    <img src="./__MACOSX/assets/image/cleaning.png" alt="image" class="mb-3 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
+                    <img src="./assets/image/vet.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500"> 
+                  </div> 
+                  <div class="image-item" data-category="veterinary"> 
+                    <img src="./__MACOSX/assets/image/CAV1.png" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
+                    <img src="assets/image/fumigation4.jpeg" alt="image" class="hover:opacity-75 transition ease-in-out duration-500"> 
+                  </div> 
                 </div>
 
             </div> <!-- container.// -->
@@ -555,7 +569,7 @@
         <!-- gallery section //end -->
         
         <!-- Organization section -->
-        <section>
+        <!-- <section>
             <div class="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
               <header>
                 <h2 class="text-xl font-bold text-gray-900 sm:text-4xl">Organizations that trust <span style="background-color: #128620" class="text-white px-4"> us</span></h2>
@@ -748,15 +762,71 @@
                 </li>
               </ol>
             </div>
-          </section>
+          </section> -->
         <!-- Organization section //ends -->
+
+        <!-- Logo slider -->
+         <section class="body2 " >
+          <header class="mt-20 mx-auto max-w-screen-2xl p-4">
+            <h2 class="text-xl font-bold text-gray-900 sm:text-4xl flex">Organizations that trust <span style="background-color: #128620" class="text-white px-4"> us</span></h2>
+      
+            <p class="mt-4 max-w-2xl text-gray-500 mb-20">
+              We have had the privilege of working with esteemed organizations and institutions across various sectors, 
+              including export, energy, corporate businesses, and public health. These collaborations 
+              reflect our commitment to delivering exceptional services, whether in pest control, agricultural consultancy, clinical care, 
+              or the provision of high-quality equipment.
+            </p>
+          </header>
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/ncc2.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nepza.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nhis.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/npc2.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nspm.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/energy_commission.jpeg" alt="">
+              </div>
+
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/ncc2.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nepza.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nhis.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/npc2.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/nspm.jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./__MACOSX/assets/image/energy_commission.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+         </section>
+        <!-- Logo slider ends -->
 
         <!-- Certificate section -->
          <section class="bg-gray-100 py-12">
             <h2 class="text-center text-4xl font-bold mt-10">Affiliations</h2>
             <div class="container2">
                 <div class="slider-wrapper">
-                    <div class="slider">
+                    <div class="slider2">
                         <img id="slide-1" src="./__MACOSX/assets/image/abuja-municipal.webp" alt="fumigation-image">
                         <img id="slide-2" src="./__MACOSX/assets/image/pecan3.png" alt="fumkgation-2">
                         <img id="slide-3" src="./__MACOSX/assets/image/abuja-municipal2.webp" alt="fumigation-3">
@@ -791,7 +861,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 md:mb-20">
 
                     <div class="bg-gray-100 rounded-lg flex flex-col items-center justify-center p-6 h-300px">
-                        <img src="assets/image/testimoni-3.png" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
+                        <img src="assets/image/avatar1.webp" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
 
                         <div class="flex items-center gap-5 mx-8">
                             <i data-feather="star" class="text-yellow-500"></i>
@@ -805,11 +875,11 @@
                           "This team exceeded my expectations! <br> Their  customer  service was exceptional, <br> and I  felt  genuinely supported throughout <br> the  entire process."
                         </p>
 
-                        <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">AbdulRasheed Adewale</h3>
+                        <h3 class="font-semibold text-center text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">AbdulRasheed Adewale</h3>
                     </div>
 
                     <div class="bg-gray-100 rounded-lg flex flex-col items-center justify-center p-6 h-300px">                        
-                      <img src="assets/image/testimoni-4.png" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
+                      <img src="assets/image/avatar2.webp" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
 
                         <div class="flex items-center gap-5 mx-8">
                             <i data-feather="star" class="text-yellow-500"></i>
@@ -823,25 +893,25 @@
                           "Their attention to detail and commitment to  <br> quality were truly impressive. I would <br>  recommend them to anyone  looking for <br> reliable services."
                         </p>
 
-                        <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Helen Maxwell</h3>
+                        <h3 class="font-semibold text-center text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Helen Maxwell</h3>
                     </div>
 
                     <div class="bg-gray-100 rounded-lg flex flex-col items-center justify-center p-6 h-300px">                      
-                      <img src="assets/image/testimoni-4.png" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
+                      <img src="assets/image/avatar3.png" alt="Image" class="w-24 h-24 rounded-full mx-8 my-8">
 
                       <div class="flex items-center gap-5 mx-8">
                           <i data-feather="star" class="text-yellow-500"></i>
                           <i data-feather="star" class="text-yellow-500"></i>
                           <i data-feather="star" class="text-yellow-500"></i>
                           <i data-feather="star" class="text-yellow-500"></i>
-                          <i data-feather="star" class="text-yellow-500"></i>
+                          <!-- <i data-feather="star" class="text-yellow-500"></i> -->
                       </div>
 
                       <p class="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">
                         "Highly professional and dependable. They provided solutions tailored to my needs, and the results were outstanding!"
                       </p>
 
-                      <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Munirat Gbadamosi</h3>
+                      <h3 class="font-semibold text-center text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Munirat Gbadamosi</h3>
                   </div>
 
 
@@ -981,10 +1051,11 @@
                         What is fumigation, and why is it necessary?
                     </h2>
               
-                    <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
-                      <svg
+                    <span class="shrink-0 rounded-full p-1.5 text-white " style="background-color: #128620;">
+                      <i id="chevron-1" class="chevron-icon" data-feather="chevron-down"></i>
+                      <!-- <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
+                        class="size-5 w-4 shrink-0 transition duration-300 group-open:-rotate-45"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       > 
@@ -992,7 +1063,8 @@
                           fill-rule="evenodd"
                           d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                           clip-rule="evenodd"
-                        />
+                          class=""
+                        /> -->
                       </svg>
                     </span>
                   </summary>
@@ -1014,19 +1086,8 @@
                         How often should fumigation be carried out?
                     </h2>
               
-                    <span class="shrink-0 rounded-full  p-1.5 text-white sm:p-3" style="background-color: #128620;">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
+                    <span class="shrink-0 rounded-full  p-1.5 text-white" style="background-color: #128620;">
+                      <i id="chevron-2" class="chevron-icon" data-feather="chevron-down"></i>
                     </span>
                   </summary>
               
@@ -1046,19 +1107,8 @@
                         What types of pests do you handle?
                     </h2>
               
-                    <span class="shrink-0 rounded-full p-1.5 text-white sm:p-3" style="background-color: #128620;">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
+                    <span class="shrink-0 rounded-full p-1.5 text-white" style="background-color: #128620;">
+                      <i id="chevron-3" class="chevron-icon" data-feather="chevron-down"></i>
                     </span>
                   </summary>
               
@@ -1192,6 +1242,47 @@
             console.error("Error:", error);
             alert("An error occurred. Please try again.");
             }
+        });
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const filterButtons = document.querySelectorAll(".filter-button");
+          const imageItems = document.querySelectorAll(".image-item");
+
+          filterButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+              event.preventDefault();
+              const filter = button.getAttribute("data-filter");
+
+              imageItems.forEach(item => { item.style.display = (filter === "all" || item.getAttribute("data-category") === filter) ? "flex" : "none";
+              });
+
+              filterButtons.forEach(btn => btn.classList.remove("bg-green-800", "text-white"));
+              button.classList.add("bg-green-800", "text-white");
+            });
+          });
+        });
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const detailsElements = document.querySelectorAll("details");
+
+          detailsElements.forEach((details, index) => {
+            details.addEventListener("toggle", () => {
+              const chevronIcon = document.getElementById(`chevron-${index + 1}`);
+
+              if (details.open) {
+                chevronIcon.setAttribute("data-feather", "chevron-up");
+              } else {
+                chevronIcon.setAttribute("data-feather", "chevron-down");
+              }
+
+              // Re-render the feather icons
+              feather.replace();
+            });
+          });
         });
       </script>
 
