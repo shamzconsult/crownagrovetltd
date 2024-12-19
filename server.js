@@ -7,13 +7,21 @@ const cors = require("cors");
 
 
 const app = express();
+
 // The port
 const PORT = process.env.PORT || 5000;
 
 // The Middleware
 // app.use(cors());
 // const cors = require("cors");
-app.use(cors({   origin: /\.crownagrovetltd\.com$/,}));
+app.use(cors({
+  origin: "https://www.crownagrovetltd.com",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+  allowedHeaders: "Content-Type,Authorization",
+}));
+
+app.options("*", cors());
+app.use(express.json());
 app.use(bodyParser.json());
 
 // The route
@@ -34,7 +42,7 @@ app.post("/send-email", async (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
+    from: `"${name}" <${email}>`,
     to: process.env.RECEIVER_EMAIL, 
     subject: "New Consultation Request",
     text: `
