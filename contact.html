@@ -245,45 +245,49 @@
     </script>
 
     <script>
-         function showSuccessMessage() {
-            const successMessage = document.getElementById('successMessage');
-            successMessage.classList.remove('hidden');
+        function showSuccessMessage() {
+        const successMessage = document.getElementById('successMessage');
+        successMessage.classList.remove('hidden');
+
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+        }, 5000);
+    }
+    document.getElementById("submitButton").addEventListener("click", async () => {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const date = document.getElementById("date").value;
+        const meetingType = document.getElementById("meetingType").value;
+
+        if (!name || !email || !date || !meetingType) {
+        alert("Please fill in all fields.");
+        return;
         }
-        document.getElementById("submitButton").addEventListener("click", async () => {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const date = document.getElementById("date").value;
-            const meetingType = document.getElementById("meetingType").value;
 
-            if (!name || !email || !date || !meetingType) {
-            alert("Please fill in all fields.");
-            return;
-            }
-
-            try {
-            const response = await fetch("http://localhost:5000/send-email", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ name, email, date, meetingType }),
-            });
-
-            if (response.ok) {
-                showSuccessMessage();
-                
-                document.getElementById("name").value = '';
-                document.getElementById("email").value = '';
-                document.getElementById("date").value = '';
-                document.getElementById("meetingType").value = '';
-            } else {
-                alert("Failed to send message. Please try again.");
-            }
-            } catch (error) {
-            console.error("Error:", error);
-            alert("An error occurred. Please try again.");
-            }
+        try {
+            const response = await fetch("https://api.crownagrovetltd.com/send-email", {                
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, date, meetingType }),
         });
+
+        if (response.ok) {
+            showSuccessMessage();
+            
+            document.getElementById("name").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("date").value = '';
+            document.getElementById("meetingType").value = '';
+        } else {
+            alert("Failed to send message. Please try again.");
+        }
+        } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+        }
+    });
     </script>
   
 </body>
