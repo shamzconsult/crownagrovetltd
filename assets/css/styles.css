@@ -10,7 +10,7 @@
     margin: 0 auto;
 }
 
-.slider {
+.slider2 {
     display: flex;
     aspect-ratio: 16 / 9;
     overflow: auto;
@@ -27,7 +27,7 @@
     display: none; 
 }
 
-.slider img {
+.slider2 img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;

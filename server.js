@@ -33,7 +33,7 @@ app.post("/send-email", async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "", 
+    to: process.env.RECEIVER_EMAIL, 
     subject: "New Consultation Request",
     text: `
       Dear Crown Agrovet LTD,
@@ -53,7 +53,9 @@ app.post("/send-email", async (req, res) => {
 
       Best regards,  
       ${name}
+      Sender's Email: ${email}  
     `,
+    replyTo: email,
   };
 
   try {
