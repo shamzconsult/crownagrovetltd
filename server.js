@@ -13,11 +13,7 @@ const PORT = process.env.PORT || 5000;
 // The Middleware
 // app.use(cors());
 // const cors = require("cors");
-app.use(cors(
-  { 
-    origin: "https://www.crownagrovetltd.com" 
-  }
-));
+app.use(cors({   origin: /\.crownagrovetltd\.com$/,}));
 app.use(bodyParser.json());
 
 // The route
