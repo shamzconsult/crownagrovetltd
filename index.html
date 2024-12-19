@@ -561,7 +561,7 @@
                 </div>
                  
                 <div class="image-item" data-category="veterinary"> 
-                  <img src="assets/image/fumigation4.jpeg" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
+                  <img src="assets/image/animal-care2.avif" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
                   <img src="assets/image/veterinary.jpeg" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
                   <img src="assets/image/veterinary2.jpg" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"> 
                 </div> 
@@ -1036,7 +1036,7 @@
             }
 
             try {
-              const response = await fetch("/send-email", {               
+              const response = await fetch("http://localhost:5000/send-email", {               
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",
