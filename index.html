@@ -1036,7 +1036,8 @@
             }
 
             try {
-              const response = await fetch("https://api.crownagrovetltd.com/send-email", {                method: "POST",
+              const response = await fetch("/send-email", {               
+                method: "POST",
                 headers: {
                 "Content-Type": "application/json",
                 },

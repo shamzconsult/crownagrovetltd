@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.options("/send-email", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "https://www.crownagrovetltd.com");
