@@ -11,7 +11,9 @@ const app = express();
 const PORT = 5000;
 
 // The Middleware
-app.use(cors());
+// app.use(cors());
+// const cors = require("cors");
+app.use(cors({ origin: "https://www.crownagrovetltd.com" }));
 app.use(bodyParser.json());
 
 // The route
