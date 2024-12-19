@@ -5,26 +5,37 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-
 const app = express();
 
 // The port
 const PORT = process.env.PORT || 5000;
 
-// The Middleware
-// app.use(cors());
-// const cors = require("cors");
+// Middleware
 app.use(cors({
   origin: "https://www.crownagrovetltd.com",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization",
+  credentials: true,
 }));
 
-app.options("*", cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
-// The route
+app.options("/send-email", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://www.crownagrovetltd.com");
+  res.setHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type,Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.status(200).end();
+});
+
+app.use((req, res, next) => {
+  console.log(`[${req.method}] ${req.url}`);
+  console.log("Headers:", req.headers);
+  next();
+});
+
+// The email route
 app.post("/send-email", async (req, res) => {
   const { name, email, date, meetingType } = req.body;
 
@@ -32,18 +43,18 @@ app.post("/send-email", async (req, res) => {
     return res.status(400).json({ message: "All fields are required." });
   }
 
-// Nodemailer setup
+  // Nodemailer setup
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.USER, 
+      user: process.env.USER,
       pass: process.env.PASS,
     },
   });
 
   const mailOptions = {
     from: `"${name}" <${email}>`,
-    to: process.env.RECEIVER_EMAIL, 
+    to: process.env.RECEIVER_EMAIL,
     subject: "New Consultation Request",
     text: `
       Dear Crown Agrovet LTD,
@@ -69,14 +80,16 @@ app.post("/send-email", async (req, res) => {
   };
 
   try {
+    // Send email
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Email sent successfully." });
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ message: "Failed to send email." });
+    res.status(500).json({ message: "Failed to send email.", error: error.message });
   }
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);});
+  console.log(`Server running on port ${PORT}`);
+});
